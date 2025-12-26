@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Bus Tracking</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <h2>🚌 Live Bus Tracking Dashboard</h2>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- FLOATING LIVE INFO PANEL -->
+  <div class="info-panel" id="infoPanel">
+    <h3>Live Bus Status</h3>
+    <p id="busInfo">Tracking buses...</p>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+
+  <!-- Firebase v8 (NON-MODULE, STABLE) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <!-- Firebase config -->
+  <script src="firebaseConfig.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Map logic -->
+  <script src="map.js"></script>
+
+</body>
+</html>

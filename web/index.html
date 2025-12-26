@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where Is My Bus?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+
+  <!-- LOGO -->
+  <img 
+    src="bus-logo.png" 
+    alt="Bus Logo" 
+    class="logo"
+    onerror="this.src='https://cdn-icons-png.flaticon.com/512/61/61231.png'"
+  >
+
+  <!-- TITLE -->
+  <h1>Where Is My Bus?</h1>
+  <p class="subtitle">
+    Real-Time Public Transport Tracking System
+  </p>
+
+  <!-- SEARCH CARD -->
+  <div class="search-card">
+    <input list="locations" id="from" placeholder="From (e.g. Tambaram)">
+    <input list="locations" id="to" placeholder="To (e.g. Adyar)">
+    <button onclick="searchRoutes()">Search Routes</button>
+  </div>
+
+</div>
+
+<!-- AUTO-SUGGEST LOCATIONS -->
+<datalist id="locations">
+  <option value="Tambaram">
+  <option value="Chromepet">
+  <option value="Guindy">
+  <option value="Saidapet">
+  <option value="T Nagar">
+  <option value="Adyar">
+  <option value="CMBT">
+  <option value="Anna Nagar">
+  <option value="Koyambedu">
+  <option value="Perungudi">
+  <option value="OMR">
+  <option value="Velachery">
+  <option value="Adambakkam">
+  <option value="Pallavaram">
+  <option value="Alandur">
+  <option value="Egmore">
+  <option value="Chennai Central">
+</datalist>
+
+<script>
+function searchRoutes() {
+  const from = document.getElementById("from").value.trim();
+  const to = document.getElementById("to").value.trim();
+
+  if (!from || !to) {
+    alert("Please enter both locations");
+    return;
+  }
+
+  window.location.href = `routes.html?from=${from}&to=${to}`;
+}
+</script>
+
+</body>
+</html>
