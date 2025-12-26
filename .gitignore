@@ -1,0 +1,5 @@
+serviceAccountKey.json
+simulator/serviceAccountKey.json
+__pycache__/
+.env
+
